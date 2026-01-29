@@ -1,110 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>PORTAL KOMBAT | Мультиплеерный файтинг</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <style>
-        * { margin: 0; padding: 0; }
-        body { 
-            background: #000; 
-            color: #0ff;
-            font-family: 'Courier New', monospace;
-            overflow: hidden;
-        }
-        #game-container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-        #hud {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            z-index: 1000;
-            font-size: 24px;
-            text-shadow: 0 0 10px #0ff;
-        }
-        #combos {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0,255,255,0.1);
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #0ff;
-        }
-        .combo-key {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #000;
-            border: 2px solid #0ff;
-            color: #0ff;
-            text-align: center;
-            line-height: 36px;
-            margin: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .active {
-            background: #0ff;
-            color: #000;
-            box-shadow: 0 0 15px #0ff;
-        }
-        #mobile-controls {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 20px;
-            display: none;
-        }
-        @media (max-width: 768px) {
-            #mobile-controls { display: block; }
-        }
-    </style>
-    <!-- Phaser 3 -->
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
-</head>
-<body>
-    <!-- Игровой холст -->
-    <div id="game-container"></div>
-    
-    <!-- HUD -->
-    <div id="hud">
-        <span id="player-name">PLAYER</span> | 
-        HEALTH: <span id="health">100</span> | 
-        COMBO: <span id="combo-counter">0x</span> |
-        PORTALS: <span id="portals">2</span>
-    </div>
-    
-    <!-- Комбо-панель -->
-    <div id="combos">
-        <div class="combo-key" id="key-q">Q</div>
-        <div class="combo-key" id="key-w">W</div>
-        <div class="combo-key" id="key-e">E</div>
-        <div class="combo-key" id="key-r">R</div>
-        <div style="color:#0ff; margin-top:10px;">ПОРТАЛЫ: SPACE</div>
-    </div>
-    
-    <!-- Мобильное управление -->
-    <div id="mobile-controls">
-        <div style="display:flex; justify-content:space-between;">
-            <div>
-                <button class="mobile-btn" data-key="ArrowLeft">←</button>
-                <button class="mobile-btn" data-key="ArrowRight">→</button>
-                <button class="mobile-btn" data-key="ArrowUp">↑</button>
-                <button class="mobile-btn" data-key="ArrowDown">↓</button>
-            </div>
-            <div>
-                <button class="mobile-btn attack" data-key=" ">⚔️</button>
-                <button class="mobile-btn portal" data-key="p">🌀</button>
-            </div>
-        </div>
-    </div>
-    
-    <script src="game.js"></script>
-    <script src="combos.js"></script>
-</body>
-  </html>
+<!-- Вставьте это в body, заменив текущее содержимое -->
+<div id="game-container">
+    <!-- Игра появится здесь -->
+</div>
+
+<div style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 10px; color: white; font-family: Arial;">
+    <h3>Portal Kombat 🎮</h3>
+    <p>Уничтожьте всех врагов!</p>
+    <p>Комбо: Q+W+E, W+E+R, Q+E+R, Q+Q+Q</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+<script src="game.js"></script>
